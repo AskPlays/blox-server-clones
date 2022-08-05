@@ -1,0 +1,29 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  top: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.list * {
+  padding: 8px;
+  text-decoration: none;
+  background-color: #333842;
+  color: white;
+  cursor: pointer;
+}
+
+.listWrapper {
+  position: relative;
+}
+
+.listWrapper > a {
+  display: block;
+}
+
+.listWrapper:hover > .list, .listWrapper:focus-within > .list {
+  display: flex;
+}

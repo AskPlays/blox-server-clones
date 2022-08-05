@@ -1,0 +1,37 @@
+.game {
+  display: flex;
+  padding: 16px;
+  outline: none;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 128px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  position: relative;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 128px;
+}
+
+.top {
+  height: 640px;
+  border: 2px solid #fff;
+}
+
+.bottom {
+  height: 640px;
+  width: 320px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}

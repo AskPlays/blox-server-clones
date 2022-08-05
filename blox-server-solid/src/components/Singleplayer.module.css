@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list > button {
+  padding: 4px;
+  padding-bottom: 6px;
+  margin-top: 2px;
+  border-radius: 4px;
+  background-color: #282c34;
+  color: #fff;
+  cursor: pointer;
+}
