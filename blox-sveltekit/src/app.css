@@ -1,0 +1,109 @@
+@import '@fontsource/fira-mono';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--pure-white: #ffffff;
+	--text-color: #ffffff;
+	--primary-color: rgba(30, 20, 60, 1);
+	--secondary-color: rgba(40, 20, 60, 1);
+	--tertiary-color: rgba(40, 20, 70, 1);
+	--accent-color: #95f;
+	--card-color: rgb(56, 31, 94);
+	--heading-color: #ffffff;
+	--background-without-opacity: rgba(30, 20, 60, 1);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-color: var(--primary-color);
+	background: linear-gradient(
+		180deg,
+		var(--primary-color) 0%,
+		var(--secondary-color) 10.45%,
+		var(--tertiary-color) 41.35%
+	);
+	color: var(--text-color);
+}
+
+/* body::before {
+	content: '';
+	width: 80vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 10vw;
+	z-index: -1;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		var(--pure-white) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	opacity: 0.05;
+} */
+
+#svelte {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	color: var(--text-color);
+	background-color: var(--accent-color);
+}
+
+h1,
+h2,
+p {
+	font-weight: 400;
+	color: var(--text-color);
+}
+
+p {
+	line-height: 1.5;
+	margin: 5px 0px;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+pre {
+	font-size: 16px;
+	font-family: var(--font-mono);
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+	color: var(--text-color);
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* @media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+} */
