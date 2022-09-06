@@ -2,36 +2,57 @@
   display: flex;
   padding: 16px;
   outline: none;
+  order: -1;
+  justify-content: center;
 }
 
 .left {
   display: flex;
   flex-direction: column;
-  width: 128px;
+  width: 64px;
 }
 
 .center {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 164px;
+  height: 324px;
   position: relative;
 }
 
 .right {
   display: flex;
   flex-direction: column;
-  width: 128px;
+  width: 64px;
 }
 
 .top {
-  height: 640px;
+  height: 324px;
+  width: 164px;
   border: 2px solid #fff;
 }
 
 .bottom {
-  height: 640px;
-  width: 320px;
+  height: 320px;
+  width: 160px;
   position: absolute;
   top: 2px;
   left: 2px;
+}
+
+@media (min-width: 400px) {
+  .game {
+    order: 0;
+  }
+  .center, .top {
+    width: 324px;
+    height: 644px;
+  }
+  .bottom {
+    width: 320px;
+    height: 640px;
+  }
+  .left, .right {
+    width: 128px;
+  }
 }

@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .main {
@@ -31,4 +31,10 @@
 
 .aside {
   flex-grow: 1;
+}
+
+@media (min-width: 400px) {
+  .container {
+    flex-direction: row;
+  }
 }

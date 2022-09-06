@@ -2,6 +2,7 @@ import { Component, onCleanup } from 'solid-js';
 import { stats } from '../store';
 
 import styles from './Game.module.css';
+import sideStyles from './Sidebar.module.css';
 
 export const Game: Component = () => {
   const interval = setInterval(() => {

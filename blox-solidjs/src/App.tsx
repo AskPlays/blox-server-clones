@@ -12,7 +12,17 @@ import { Opener } from './components/Opener';
 import { Chat } from './components/Chat';
 
 const App: Component = () => {
-  const [loggedIn, setLoggedIn] = createSignal(false);
+  const [loggedIn, setLoggedIn] = createSignal(localStorage.getItem('loggedIn') ?? false);
+  const login = () => {
+    localStorage.setItem('loggedIn', 'true');
+    setLoggedIn(true);
+    return '';
+  };
+  const logout = () => {
+    localStorage.removeItem('loggedIn');
+    setLoggedIn(false);
+    return '';
+  }
   return (
     <div>
       <header class={styles.header}>
@@ -40,11 +50,11 @@ const App: Component = () => {
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/mapmaker" element={<div>map maker</div>} />
         <Route path="/about" element={<div>about</div>} />
-        <Route path="/login" element={<div>you have now logged in {setLoggedIn(true)}</div>} />
+        <Route path="/login" element={<div>you have now logged in {login()}</div>} />
         <Route path="/profile" element={<div>profile</div>} />
         <Route path="/times" element={<div>times</div>} />
         <Route path="/account" element={<div>account</div>} />
-        <Route path="/logout" element={<div>You have logged out {setLoggedIn(false)}</div>} />
+        <Route path="/logout" element={<div>You have logged out {logout()}</div>} />
       </Routes>
       <Chat/>
     </div>
